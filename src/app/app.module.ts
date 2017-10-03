@@ -3,12 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { ClientesModule } from './clientes/clientes.module';
+import { MenuComponent } from './menu/menu.component';
+import { OpcionSeleccionadaComponent } from './opcion-seleccionada/opcion-seleccionada.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    OpcionSeleccionadaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ClientesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
