@@ -1,10 +1,12 @@
 
 export class Clientes{
-    cedula:string;
-    nombre:string;
-    apellidos:string;
-    telefono:string;
-    direccion:string;
-    correo:string;
-    profesion:string;
+    
+    
+    public cedula:string;
+    public nombre:string;
+    public apellidos:string;
+    public telefono:string;
+    public direccion:string;
+    public correo:string;
+    public profesion:string;
 }

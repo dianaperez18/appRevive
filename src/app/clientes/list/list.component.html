@@ -1,17 +1,28 @@
+<div class="center"><h3>Clientes</h3></div>
 <table class="striped">
     <thead>
       <tr>
+          <th>Cedula</th>
           <th>Nombre</th>
-          <th>Item Name</th>
-          <th>Item Price</th>
+          <th>Apellidos</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Email</th>
+          <th>Profesion</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr>
-        <td>Alvin</td>
-        <td>Eclair</td>
-        <td>$0.87</td>
+      <tr *ngFor="let clientes of clientesDataService.clientesLista">
+        <td>{{clientes.cedula}}</td>
+        <td>{{clientes.nombre}}</td>
+        <td>{{clientes.apellido}}</td>
+        <td>{{clientes.telefono}}</td>
+        <td>{{clientes.direccion}}</td>
+        <td>{{clientes.correo}}</td>
+        <td>{{clientes.profesion}}</td>
+       
+
       </tr>
      
     </tbody>
