@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clientes } from '../Clientes';
+import { ServiceClientesService } from "../../service-clientes.service";
 
 @Component({
   selector: 'clientes-add',
@@ -9,7 +10,7 @@ import { Clientes } from '../Clientes';
 export class AddComponent implements OnInit {
 
   clientes:Clientes;
-  constructor() { }
+  constructor(private clientesDataService: ServiceClientesService) { }
 
   ngOnInit() {
     
@@ -21,6 +22,11 @@ export class AddComponent implements OnInit {
 
   nuevoCliente(){
     this.clientes = new Clientes(); 
+  }
+
+  agregarCliente(){
+    this.clientesDataService.crearCliente(this.clientes);
+    this.clientes = new Clientes();
   }
 
 }

@@ -18,4 +18,14 @@ export class ServiceClientesService {
 
   }
 
+  crearCliente(clientes: Clientes){
+    const body = {cedula: clientes.cedula, nombre: clientes.nombre, apellido: clientes.apellidos, telefono: clientes.telefono,
+      direccion: clientes.direccion, correo: clientes.correo, profesion:clientes.profesion
+    };
+    this.http.post('http://192.168.2.218:8080/revive/webresources/co.edu.revive.entidades.clientes', body)
+    .subscribe(data =>{
+      alert('cliente creado');
+    });
+  }
+
 }
