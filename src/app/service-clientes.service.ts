@@ -10,7 +10,7 @@ export class ServiceClientesService {
   constructor(private http: HttpClient) { }
 
   cargarClientes() {
-    this.http.get('http://192.168.2.218:8080/revive/webresources/co.edu.revive.entidades.clientes')
+    this.http.get('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.clientes')
     .subscribe(data => {
       // Read the result field from the JSON response.
       this.clientesLista = data as Array<Clientes>;
@@ -22,9 +22,9 @@ export class ServiceClientesService {
     const body = {cedula: clientes.cedula, nombre: clientes.nombre, apellido: clientes.apellidos, telefono: clientes.telefono,
       direccion: clientes.direccion, correo: clientes.correo, profesion:clientes.profesion
     };
-    this.http.post('http://192.168.2.218:8080/revive/webresources/co.edu.revive.entidades.clientes', body)
+    this.http.post('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.clientes', body)
     .subscribe(data =>{
-      alert('cliente creado');
+      alert('EL cliente se ha registrado correctamente');
     });
   }
 

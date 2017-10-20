@@ -1,0 +1,31 @@
+<div class="center"><h3>Listado Instructores</h3></div>
+<table class="striped">
+    <thead>
+      <tr>
+          <th>Cedula</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Email</th>
+          <th>Profesion</th>
+          <th>Curso</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let instructores of instructoresDataService.instructoresLista">
+        <td>{{instructores.cedula}}</td>
+        <td>{{instructores.nombre}}</td>
+        <td>{{instructores.apellido}}</td>
+        <td>{{instructores.telefono}}</td>
+        <td>{{instructores.direccion}}</td>
+        <td>{{instructores.correo}}</td>
+        <td>{{instructores.profesion}}</td>
+        <td>{{instructores.curso}}</td>
+       
+
+      </tr>
+     
+    </tbody>
+  </table>
