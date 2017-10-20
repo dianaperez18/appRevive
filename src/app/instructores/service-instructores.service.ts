@@ -18,13 +18,14 @@ export class ServiceInstructoresService {
 
 }
 
-crearInstructores(instructores: Instructores){alert(instructores.curso)
+crearInstructores(instructores: Instructores){
   const body = {cedula: instructores.cedula, nombre: instructores.nombre, apellido: instructores.apellido, telefono: instructores.telefono,
     direccion: instructores.direccion, correo: instructores.correo, profesion: instructores.profesion, curso: instructores.curso
   };
   this.http.post('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.instructores', body)
   .subscribe(data =>{
     alert('EL Instructor se ha registrado correctamente');
+    this.cargarInstructores();
   });
 }
 

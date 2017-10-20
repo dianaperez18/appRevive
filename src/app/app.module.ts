@@ -10,6 +10,8 @@ import { CursosModule } from './cursos/cursos.module';
 import { InicioModule } from './inicio/inicio.module';
 import { InstructoresModule } from './instructores/instructores.module';
 import { InscripcionModule } from './inscripcion/inscripcion.module';
+import { EmpresasModule } from './empresas/empresas.module';
+
 
 import { MenuComponent } from './menu/menu.component';
 import { OpcionSeleccionadaComponent } from './opcion-seleccionada/opcion-seleccionada.component';
@@ -19,6 +21,7 @@ import { IndexComponent as IndexCursosComponent  } from './cursos/index/index.co
 import { IndexComponent as IndexInicioComponent  } from './inicio/index/index.component';
 import { IndexComponent as IndexInstructoresComponent  } from './instructores/index/index.component';
 import { IndexComponent as IndexInscripcionComponent  } from './inscripcion/index/index.component';
+import { IndexComponent as IndexEmpresasComponent  } from './empresas/index/index.component';
 
 const appRoutes:Routes = [
 
@@ -26,7 +29,8 @@ const appRoutes:Routes = [
   {path:"cursos/index", component: IndexCursosComponent },
   {path:"inicio/index", component: IndexInicioComponent },
   {path:"instructores/index", component: IndexInstructoresComponent },
-  {path:"inscripcion/index", component: IndexInscripcionComponent }
+  {path:"inscripcion/index", component: IndexInscripcionComponent },
+  {path:"empresas/index", component: IndexEmpresasComponent }
 ];
 
 @NgModule({
@@ -42,6 +46,7 @@ const appRoutes:Routes = [
     InicioModule,
     InstructoresModule,
     InscripcionModule,
+    EmpresasModule,
     RouterModule.forRoot(appRoutes),
     MaterializeModule
     

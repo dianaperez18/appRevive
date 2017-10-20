@@ -1,0 +1,28 @@
+<div class="center"><h3>Listado Inscripciones</h3></div>
+<table class="striped">
+    <thead>
+      <tr>
+          <th>Codigo Inscripcion</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Telefono</th>
+          <th>Curso</th>
+          <th>Valor</th>
+          
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let inscripcion of inscripcionDataService.inscripcionLista">
+        <td>{{inscripcion.codigoinscripcion}}</td>
+        <td>{{inscripcion.nombre}}</td>
+        <td>{{inscripcion.apellido}}</td>
+        <td>{{inscripcion.telefono}}</td>
+        <td>{{inscripcion.curso}}</td>
+        <td>{{inscripcion.valor | currency:'COP':false}}</td>
+       
+
+      </tr>
+     
+    </tbody>
+  </table>

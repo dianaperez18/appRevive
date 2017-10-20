@@ -1,0 +1,25 @@
+<div class="center"><h3>Empresas</h3></div>
+<table class="striped">
+    <thead>
+      <tr>
+          <th>Nit</th>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let empresas of empresasDataService.empresasLista">
+        <td>{{empresas.nit}}</td>
+        <td>{{empresas.nombre}}</td>
+       
+        <td>{{empresas.telefono}}</td>
+        <td>{{empresas.direccion}}</td>
+
+
+      </tr>
+     
+    </tbody>
+  </table>

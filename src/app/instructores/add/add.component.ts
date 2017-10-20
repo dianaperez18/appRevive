@@ -25,5 +25,4 @@ export class AddComponent implements OnInit {
     this.instructores = new Instructores(); 
   }
 
-
 }

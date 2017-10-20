@@ -25,6 +25,7 @@ export class ServiceClientesService {
     this.http.post('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.clientes', body)
     .subscribe(data =>{
       alert('EL cliente se ha registrado correctamente');
+      this.cargarClientes();
     });
   }
 

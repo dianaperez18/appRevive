@@ -5,9 +5,18 @@ import { Inscripcion } from "./inscripcion";
 @Injectable()
 export class ServiceInscripcionService {
 
-  
+  inscripcionLista:Array<Inscripcion>;
 
   constructor(private http: HttpClient) { }
+
+  cargarInscripcion() {
+    this.http.get('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.inscripcion')
+    .subscribe(data => {
+      // Read the result field from the JSON response.
+      this.inscripcionLista = data as Array<Inscripcion>;
+});
+
+}
 
 
   crearInscripcion(incripcion: Inscripcion){
@@ -17,6 +26,7 @@ export class ServiceInscripcionService {
     this.http.post('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.inscripcion', body)
     .subscribe(data =>{
       alert('La Inscripcion se registro correctamente');
+      this.cargarInscripcion();
     });
   }
 }
