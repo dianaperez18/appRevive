@@ -10,7 +10,7 @@ export class ServiceEmpresasService {
   constructor(private http: HttpClient) { }
 
   cargarEmpresas() {
-    this.http.get('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.empresas')
+    this.http.get('http://192.168.2.210:8080/revive/webresources/co.edu.revive.entidades.empresas')
     .subscribe(data => {
       // Read the result field from the JSON response.
       this.empresasLista = data as Array<Empresas>;
@@ -22,7 +22,7 @@ export class ServiceEmpresasService {
     const body = {nit: empresas.nit, nombre: empresas.nombre,  telefono: empresas.telefono,
       direccion: empresas.direccion
     };
-    this.http.post('http://192.168.2.214:8080/revive/webresources/co.edu.revive.entidades.empresas', body)
+    this.http.post('http://192.168.2.210:8080/revive/webresources/co.edu.revive.entidades.empresas', body)
     .subscribe(data =>{
       alert('La empresa se  registro correctamente');
       this.cargarEmpresas();
